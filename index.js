@@ -6,10 +6,15 @@ function convertBinary() {
       output += input[i].charCodeAt(0).toString(2) + " ";
   }
 }
+function findSelect() { 
+			let index = document.getElementById("type").selectedIndex; 
+			let exit = document.getElementsByTagName("option")[index].value; 
+			return exit;
+		} 
 
 function convert(){
 let input = document.getElementById("input");
-let type  = document.getElementById("type").value;
+let type  = findSelect();
 let output;
 if (type = base64){
  output = btoa(input); 
