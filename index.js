@@ -16,7 +16,7 @@ function convert(){
 let input = document.getElementById("input").value;
 let type  = findSelect();
 let output;
-if (type = base64){
+if (type == "base64"){
  output = btoa(input); 
   document.getElementById("output") = output;
 } else{
