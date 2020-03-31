@@ -13,7 +13,7 @@ function findSelect() {
 		} 
 
 function convert(){
-let input = document.getElementById("input");
+let input = document.getElementById("input").value;
 let type  = findSelect();
 let output;
 if (type = base64){
