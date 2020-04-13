@@ -2,13 +2,10 @@ let input = document.getElementById("input").value;
 let type  = findSelect();
 let output;
 
-function binaryConvert() {
-  var  boutput=document.getElementById("output");  
-  var binput=document.getElementById("input").innerHTML;
-    boutput.innerHTML = "";
-    for (i=0; i < binput.length; i++) {
-     	boutput.innerHTML +=binput[i].charCodeAt(0).toString(2) + " ";
-    }
+function text2Binary(string) {
+    return string.split('').map(function (char) {
+        return char.charCodeAt(0).toString(2);
+    }).join(' ');
 }
 function findSelect() { 
 			let index = document.getElementById("type").selectedIndex; 
@@ -24,7 +21,7 @@ if (type == "base64"){
  output = btoa(input); 
   document.getElementById("output").innerHTML = output;
 } else{
-  output = binaryConvert();
+  output = binaryConvert(input);
   document.getElementById("output").innerHTML = output;
 }
 }
