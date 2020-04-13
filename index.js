@@ -21,7 +21,7 @@ if (type == "base64"){
  output = btoa(input); 
   document.getElementById("output").innerHTML = output;
 } else{
-  output = binaryConvert(input);
+  output = text2Binary(input);
   document.getElementById("output").innerHTML = output;
 }
 }
