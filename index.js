@@ -7,6 +7,9 @@ function text2Binary(string) {
         return char.charCodeAt(0).toString(2);
     }).join(' ');
 }
+function binary2Text(string) {
+	return parseInt(string,2);
+}
 function findSelect() { 
 			let index = document.getElementById("type").selectedIndex; 
 			let exit = document.getElementsByTagName("option")[index].value; 
@@ -18,10 +21,21 @@ input = document.getElementById("input").value;
 type  = findSelect();
 
 if (type == "base64"){
- output = btoa(input); 
+  output = btoa(input); 
   document.getElementById("output").innerHTML = output;
 } else{
   output = text2Binary(input);
   document.getElementById("output").innerHTML = output;
+}
+}
+function deConvert(){
+input = document.getElementById("input").value;
+type  = findSelect();
+if (type == "base64"){
+output = atob(input);
+document.getElementById("output").innerHTML = output;
+} else{
+output = binary2Text(input);
+document.getElementById("output").innerHTML = output;
 }
 }
