@@ -22,9 +22,9 @@ type  = findSelect();
 
 if (type == "base64"){
  output = btoa(input); 
-  document.getElementById("output") = output;
+  document.getElementById("output").innerHTML = output;
 } else{
   output = convertBinary(input);
-  document.getElementById("output") = output;
+  document.getElementById("output").innerHTML = output;
 }
 }
