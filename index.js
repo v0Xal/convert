@@ -8,7 +8,7 @@ function text2Binary(string) {
     }).join(' ');
 }
 function binary2Text(string) {
-	return parseInt(string,2);
+	return parseInt(string,2).toString(10);
 }
 function findSelect() { 
 			let index = document.getElementById("type").selectedIndex; 
