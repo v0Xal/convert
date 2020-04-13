@@ -8,7 +8,12 @@ function text2Binary(string) {
     }).join(' ');
 }
 function binary2Text(string) {
-	return parseInt(string,2).toString(10);
+	var binString = '';
+
+string.split(' ').map(function(bin) {
+    binString += String.fromCharCode(parseInt(bin, 2));
+  });
+return binString;
 }
 function findSelect() { 
 			let index = document.getElementById("type").selectedIndex; 
