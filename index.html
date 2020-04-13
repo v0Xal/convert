@@ -3,6 +3,9 @@
 body{
 display:inline-block;
 }
+ #options{
+  display:block;
+ }
 </style>
  <title>data.convert</title>
 </head>
@@ -11,12 +14,14 @@ display:inline-block;
  <textarea rows="4" cols="50" placeholder="type text here" id="input"></textarea>
 <p>Output</p>
 <textarea rows="4" cols="50" placeholder="Text out here" id="output"></textarea>
+ <div id="options">
  <select id="type" name="type">
     <option value="binary">Binary</option>
     <option value="base64">Base64</option>
   </select>
 <button onClick="convert();">Encrypt</button>
  <button onClick="deConvert();">Decrypt</button>
+ </div>
  <script src="index.js"></script>
 </body>
 </html>
